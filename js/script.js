@@ -58,3 +58,15 @@ function createTimeBlocks() {
     $(".container").append(newTimeBlock);
   }
 }
+
+function addEventListeners() {
+  // Save button click event
+  $(".saveBtn").on("click", function () {
+    // Get the data-hour attribute
+    const hour = $(this).parent().parent().attr("data-hour");
+    // Get the text from the textarea
+    const text = $(this).siblings("textarea").val();
+    // Save the text to local storage
+    localStorage.setItem(hour, text);
+  });
+}
