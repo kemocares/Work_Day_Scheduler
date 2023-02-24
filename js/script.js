@@ -25,3 +25,14 @@ function createTimeBlocks() {
   saveBtn.addClass('saveBtn')
   // Add an aria-label to the button
   saveBtn.attr('aria-label', 'Save button')
+
+  // Add a fontawesome icon to the button
+  const icon = $('<i>')
+  icon.addClass('fas fa-save')
+  saveBtn.append(icon)
+
+  row.append(hour)
+  row.append(textArea)
+  row.append(saveBtn)
+
+  timeBlock.append(row)
