@@ -7,3 +7,21 @@ $(document).ready(function () {
   addEventListeners();
   loadEvents();
 });
+// Create time blocks from 9AM to 5PM
+function createTimeBlocks() {
+  const timeBlock = $('<div>')
+  timeBlock.addClass('time-block')
+
+  const row = $('<div>')
+  row.addClass('row')
+
+  const hour = $('<div>')
+  hour.addClass('hour')
+
+  const textArea = $('<textarea>')
+  textArea.addClass('description')
+
+  const saveBtn = $('<button>')
+  saveBtn.addClass('saveBtn')
+  // Add an aria-label to the button
+  saveBtn.attr('aria-label', 'Save button')
