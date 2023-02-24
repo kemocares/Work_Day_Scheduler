@@ -70,3 +70,15 @@ function addEventListeners() {
     localStorage.setItem(hour, text);
   });
 }
+
+function loadEvents() {
+  // Loop through the time blocks
+  $(".time-block").each(function () {
+    // Get the data-hour attribute
+    const hour = $(this).attr("data-hour");
+    // Get the text from local storage
+    const text = localStorage.getItem(hour);
+    // Set the textarea text
+    $(this).find("textarea").text(text);
+  });
+}
